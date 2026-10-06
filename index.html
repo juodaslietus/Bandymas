@@ -1,85 +1,38 @@
 <!doctype html>
 <html lang="lt">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pūkų mūza – dovanų kuponai</title>
 <style>
-:root{--bg:#f3efe7;--paper:#fbf8f2;--ink:#4b433a;--muted:#8c7f70;--line:#d8cec1;--accent:#8c7159;--accent2:#c9b49d;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--ink)}
-.app{display:grid;grid-template-columns:minmax(320px,420px) minmax(560px,1fr);gap:24px;max-width:1500px;margin:0 auto;padding:24px}.panel{background:#fff;border:1px solid #e7dfd5;border-radius:18px;box-shadow:0 12px 32px rgba(68,53,39,.08);padding:22px}.panel h1{font-size:22px;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin-bottom:12px}.field.full{grid-column:1/-1}.field label{display:block;font:600 12px/1.2 system-ui,sans-serif;letter-spacing:.02em;margin-bottom:6px;color:#62594f}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font:14px system-ui,sans-serif;color:#333}.field textarea{min-height:70px;resize:vertical}.row{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 14px;font:600 13px system-ui,sans-serif;cursor:pointer;background:var(--accent);color:#fff}.btn.secondary{background:#eee7df;color:#4d443b}.btn.ghost{background:#fff;color:#5a4c40;border:1px solid var(--line)}.small{font:12px/1.45 system-ui,sans-serif;color:#74695e}.status{margin-top:10px;padding:9px 11px;border-radius:9px;background:#f4efe8;font:12px system-ui,sans-serif;color:#5d5044}.previewWrap{display:flex;justify-content:center;align-items:flex-start}.coupon{width:1120px;aspect-ratio:1.414/1;background:var(--paper);position:relative;overflow:hidden;border:1px solid #e3d8cb;box-shadow:0 16px 44px rgba(80,61,43,.14)}
-.coupon:before{content:"";position:absolute;inset:20px;border:1px solid #cdbda9;pointer-events:none}.couponInner{height:100%;display:grid;grid-template-columns:39% 61%;padding:56px 62px}.left{display:flex;flex-direction:column;justify-content:space-between;padding-right:42px;border-right:1px solid #d8cbbb}.brand{font-size:19px;letter-spacing:.17em;text-transform:uppercase;color:#705d4c}.title{margin-top:54px}.title .big{font-size:58px;line-height:.95;font-weight:400}.title .sub{margin-top:12px;font-size:22px;letter-spacing:.04em;color:#8a7764}.contacts{font:16px/1.7 system-ui,sans-serif;color:#64594d}.right{padding-left:54px;display:flex;flex-direction:column;justify-content:center}.for{font-size:19px;color:#7a6b5d;margin-bottom:8px}.name{font-size:44px;min-height:56px;border-bottom:1px solid #bfae9a;padding-bottom:9px;margin-bottom:25px}.offer{font-size:27px;line-height:1.35;white-space:pre-line;min-height:115px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px}.meta .label{font:11px system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#9b8d7f}.meta .value{font-size:20px;margin-top:7px}.note{margin-top:24px;font:14px/1.5 system-ui,sans-serif;color:#7a6c5f}.journal{margin-top:18px;border-top:1px solid #eee5dc;padding-top:16px}.journal h2{font-size:16px;margin:0 0 10px}.journalList{max-height:190px;overflow:auto;border:1px solid #eee5dc;border-radius:10px}.entry{display:grid;grid-template-columns:70px 1fr 90px;gap:8px;padding:8px 10px;border-bottom:1px solid #f0e9e2;font:12px system-ui,sans-serif}.entry:last-child{border-bottom:0}@media(max-width:1050px){.app{grid-template-columns:1fr}.coupon{width:100%}}@media print{body{background:#fff}.panel{display:none}.app{display:block;padding:0}.previewWrap{display:block}.coupon{width:297mm;height:210mm;box-shadow:none;border:0;margin:0}.coupon:before{inset:7mm}.couponInner{padding:17mm 18mm}}
+:root{--bg:#f3efe7;--paper:#fbf8f2;--ink:#4b433a;--line:#d8cec1;--accent:#8c7159}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif}.app{display:grid;grid-template-columns:minmax(320px,420px) minmax(560px,1fr);gap:24px;max-width:1500px;margin:auto;padding:24px}.panel{background:#fff;border:1px solid #e7dfd5;border-radius:18px;box-shadow:0 12px 32px rgba(68,53,39,.08);padding:22px}.panel h1{font-size:22px;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin-bottom:12px}.field.full{grid-column:1/-1}.field label{display:block;font:600 12px system-ui,sans-serif;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font:14px system-ui,sans-serif}.field textarea{min-height:70px}.row{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 14px;font:600 13px system-ui,sans-serif;cursor:pointer;background:var(--accent);color:#fff}.btn.secondary{background:#eee7df;color:#4d443b}.btn.ghost{background:#fff;color:#5a4c40;border:1px solid var(--line)}.small{font:12px/1.45 system-ui,sans-serif;color:#74695e}.status{margin-top:10px;padding:9px 11px;border-radius:9px;background:#f4efe8;font:12px system-ui,sans-serif}.previewWrap{display:flex;justify-content:center}.coupon{width:1120px;aspect-ratio:1.414/1;background:var(--paper);position:relative;overflow:hidden;border:1px solid #e3d8cb;box-shadow:0 16px 44px rgba(80,61,43,.14)}.couponInner{height:100%;display:grid;grid-template-columns:40% 60%;padding:60px 66px}.left{display:flex;flex-direction:column;justify-content:space-between;padding-right:42px}.brand{font-size:28px;line-height:1.1}.brandSite{font-family:"Comic Sans MS",cursive;font-size:18px;margin-top:6px;color:#7b6d61}.title{margin-top:85px}.title .big{font-size:58px;line-height:.95;font-weight:400}.title .sub{margin-top:12px;font-size:22px;color:#8a7764}.contacts{font:15px/1.65 system-ui,sans-serif;color:#64594d}.right{padding-left:52px;display:flex;flex-direction:column;justify-content:center;text-align:center}.for{font-size:18px;color:#7a6b5d;margin-bottom:8px}.name{font-size:44px;min-height:58px;border-bottom:1px solid #bfae9a;padding-bottom:9px;margin-bottom:24px;text-align:center}.offer{font-size:26px;line-height:1.35;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;white-space:pre-line}.spacer{flex:1}.bottomMeta{display:flex;justify-content:flex-end;gap:38px;text-align:right;margin-top:26px}.bottomMeta .label{font:11px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9b8d7f}.bottomMeta .value{font-size:19px;margin-top:6px}.journal{margin-top:18px;border-top:1px solid #eee5dc;padding-top:16px}.journal h2{font-size:16px;margin:0 0 10px}.journalList{max-height:190px;overflow:auto;border:1px solid #eee5dc;border-radius:10px}.entry{display:grid;grid-template-columns:70px 1fr 90px;gap:8px;padding:8px 10px;border-bottom:1px solid #f0e9e2;font:12px system-ui,sans-serif}.entry:last-child{border-bottom:0}@media(max-width:1050px){.app{grid-template-columns:1fr}.coupon{width:100%}}@media print{body{background:#fff}.panel{display:none}.app{display:block;padding:0}.coupon{width:297mm;height:210mm;box-shadow:none;border:0;margin:0}.couponInner{padding:17mm 18mm}}
 </style>
 </head>
-<body>
-<div class="app">
-  <section class="panel">
-    <h1>Dovanų kuponas</h1>
-    <div class="grid">
-      <div class="field full"><label>Vardas / kam skirtas</label><input id="name" value=""></div>
-      <div class="field"><label>Kupono tipas</label><select id="type"><option>Asmeninis</option><option>Grupinis</option><option>Laisvai įrašomas</option></select></div>
-      <div class="field"><label>Kupono numeris</label><input id="number" inputmode="numeric" placeholder="pvz. 100"></div>
-      <div class="field"><label>Užsiėmimų skaičius</label><input id="count" type="number" min="1" value="1"></div>
-      <div class="field"><label>Galioja iki</label><input id="valid" type="date"></div>
-      <div class="field full" id="peopleField" style="display:none"><label>Iki kiek asmenų</label><input id="people" type="number" min="1" value="4"></div>
-      <div class="field full" id="freeField" style="display:none"><label>Laisvas aprašymas</label><textarea id="freeText">Keramikos užsiėmimas</textarea></div>
-    </div>
-    <div class="row">
-      <button class="btn" id="nextBtn">Gauti kupono numerį</button>
-      <button class="btn secondary" id="saveBtn">Saugoti PNG</button>
-      <button class="btn secondary" id="printBtn">PDF / spausdinti</button>
-    </div>
-    <div class="status" id="status">Kuponų serija šiame įrenginyje dar nepradėta.</div>
-    <div class="small" style="margin-top:10px">Numeris rezervuojamas paspaudus „Gauti kupono numerį“, o kuponas į žurnalą įrašomas išsaugant PNG arba spausdinant/PDF.</div>
-    <div class="journal">
-      <h2>Kuponų žurnalas</h2>
-      <div class="journalList" id="journal"></div>
-      <div class="row" style="margin-top:10px"><button class="btn ghost" id="exportBtn">Eksportuoti atsarginę kopiją</button><label class="btn ghost" style="display:inline-block">Importuoti<input id="importFile" type="file" accept="application/json" hidden></label></div>
-    </div>
-  </section>
-
-  <main class="previewWrap">
-    <section class="coupon" id="coupon">
-      <div class="couponInner">
-        <div class="left">
-          <div>
-            <div class="brand">Pūkų mūza</div>
-            <div class="title"><div class="big">Dovanų<br>kuponas</div><div class="sub">Keramikos užsiėmimai</div></div>
-          </div>
-          <div class="contacts">www.pukmuse.lt<br>Facebook: pukmuse.lt</div>
-        </div>
-        <div class="right">
-          <div class="for">Dovanojama</div>
-          <div class="name" id="pName">&nbsp;</div>
-          <div class="offer" id="pOffer">1-o karto keramikos užsiėmimas</div>
-          <div class="meta"><div><div class="label">Kupono Nr.</div><div class="value" id="pNumber">—</div></div><div><div class="label">Galioja iki</div><div class="value" id="pValid">—</div></div></div>
-          <div class="note">Laiką suderinkime iš anksto. Kuponas skirtas kūrybiniam laikui su moliu – nuo idėjos iki savo rankomis sukurto darbo.</div>
-        </div>
-      </div>
-    </section>
-  </main>
-</div>
+<body><div class="app"><section class="panel"><h1>Dovanų kuponas</h1><div class="grid">
+<div class="field full"><label>Gavėjas</label><input id="name"></div>
+<div class="field"><label>Kupono tipas</label><select id="type"><option>Asmeninis</option><option>Grupinis</option><option>Laisvai įrašomas</option></select></div>
+<div class="field"><label>Kupono numeris</label><input id="number" inputmode="numeric" placeholder="pvz. 100"></div>
+<div class="field"><label>Užsiėmimų skaičius</label><input id="count" type="number" min="1" value="1"></div>
+<div class="field"><label>Galioja iki</label><input id="valid" type="date"></div>
+<div class="field full" id="peopleField" style="display:none"><label>Asmenų skaičius</label><input id="people" type="number" min="1" value="4"></div>
+<div class="field full" id="freeField" style="display:none"><label>Laisvas tekstas</label><textarea id="freeText">Keramikos užsiėmimas</textarea></div></div>
+<div class="row"><button class="btn" id="nextBtn">Gauti kupono numerį</button><button class="btn secondary" id="saveBtn">Saugoti PNG</button><button class="btn secondary" id="printBtn">PDF / spausdinti</button></div>
+<div class="status" id="status"></div><div class="small" style="margin-top:10px">Serija saugoma šiame įrenginyje. Numeris rezervuojamas paspaudus „Gauti kupono numerį“.</div>
+<div class="journal"><h2>Kuponų žurnalas</h2><div class="journalList" id="journal"></div><div class="row" style="margin-top:10px"><button class="btn ghost" id="exportBtn">Eksportuoti atsarginę kopiją</button><label class="btn ghost">Importuoti<input id="importFile" type="file" accept="application/json" hidden></label></div></div></section>
+<main class="previewWrap"><section class="coupon" id="coupon"><div class="couponInner"><div class="left"><div><div class="brand">Pūkų mūza</div><div class="brandSite">pukmuse.lt</div><div class="title"><div class="big">Dovanų kuponas</div><div class="sub">Keramikos užsiėmimai</div></div></div><div class="contacts">www.pukmuse.lt<br>Facebook: pukmuse.lt</div></div><div class="right"><div class="for">Dovanojama</div><div class="name" id="pName">&nbsp;</div><div class="offer" id="pOffer"></div><div class="spacer"></div><div class="bottomMeta"><div><div class="label">Kupono Nr.</div><div class="value" id="pNumber">—</div></div><div><div class="label">Galioja iki</div><div class="value" id="pValid">—</div></div></div></div></div></section></main></div>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script>
-const $=id=>document.getElementById(id);
-const KEY='pukmuse_coupon_data_v1';
-let data=load();
-function load(){try{return JSON.parse(localStorage.getItem(KEY))||{lastNumber:null,journal:[]}}catch(e){return{lastNumber:null,journal:[]}}}
-function persist(){localStorage.setItem(KEY,JSON.stringify(data));renderJournal();renderStatus()}
-function renderStatus(){const s=data.lastNumber===null?'Kuponų serija šiame įrenginyje dar nepradėta.':`Paskutinis panaudotas / rezervuotas numeris: ${data.lastNumber}. Kitas: ${Number(data.lastNumber)+1}.`; $('status').textContent=s}
-function offerText(){const t=$('type').value,c=Math.max(1,Number($('count').value)||1),p=Math.max(1,Number($('people').value)||1);if(t==='Asmeninis')return `${c}-jų kartų keramikos užsiėmimas`;if(t==='Grupinis')return `Individualios grupės,\nvieno karto lipdymas.\nIki ${p} asmenų.`;return $('freeText').value.trim()||'Keramikos užsiėmimas'}
-function update(){ $('pName').textContent=$('name').value||' '; $('pNumber').textContent=$('number').value||'—'; $('pValid').textContent=$('valid').value||'—'; $('pOffer').textContent=offerText(); const g=$('type').value==='Grupinis',f=$('type').value==='Laisvai įrašomas'; $('peopleField').style.display=g?'block':'none'; $('freeField').style.display=f?'block':'none'}
+const $=id=>document.getElementById(id),KEY='pukmuse_coupon_data_v2';
+let data=load();function load(){try{const v=JSON.parse(localStorage.getItem(KEY));return v&&Array.isArray(v.journal)?v:{lastNumber:99,journal:[]}}catch(e){return{lastNumber:99,journal:[]}}}function persist(){localStorage.setItem(KEY,JSON.stringify(data));renderJournal();renderStatus()}
+function renderStatus(){$('status').textContent=`Paskutinis rezervuotas numeris: ${data.lastNumber}. Kitas: ${Number(data.lastNumber)+1}.`}
+function ltDate(v){if(!v)return'—';const [y,m,d]=v.split('-');return `${y}-${m}-${d}`}
+function offerText(){const t=$('type').value,c=Math.max(1,Number($('count').value)||1),p=Math.max(1,Number($('people').value)||1);if(t==='Asmeninis')return `${c}-jų kartų keramikos užsiėmimas`;if(t==='Grupinis')return `Vieno karto keramikos užsiėmimas grupei iki ${p} asmenų`;return $('freeText').value.trim()||'Keramikos užsiėmimas'}
+function update(){$('pName').textContent=$('name').value||' ';$('pNumber').textContent=$('number').value||'—';$('pValid').textContent=ltDate($('valid').value);$('pOffer').textContent=offerText();$('peopleField').style.display=$('type').value==='Grupinis'?'block':'none';$('freeField').style.display=$('type').value==='Laisvai įrašomas'?'block':'none'}
 ['name','number','count','valid','people','freeText'].forEach(id=>$(id).addEventListener('input',update));$('type').addEventListener('change',update);
-$('nextBtn').addEventListener('click',()=>{let next=data.lastNumber===null?1:Number(data.lastNumber)+1; const current=Number($('number').value); if(Number.isFinite(current)&&current>next) next=current; data.lastNumber=next; $('number').value=next; persist();update()});
-function register(){const num=Number($('number').value);if(!Number.isFinite(num)||num<1)return; if(data.journal.some(x=>Number(x.number)===num))return; data.journal.unshift({number:num,name:$('name').value.trim(),valid:$('valid').value,type:$('type').value,offer:offerText(),created:new Date().toISOString()}); if(data.lastNumber===null||num>Number(data.lastNumber))data.lastNumber=num; persist()}
-function filename(){const n=($('name').value||'Kuponas').trim().replace(/[\\/:*?"<>|]+/g,' ');const num=$('number').value||'';return `Dovanu kuponas ${n}${num?' '+num:''}`}
-$('saveBtn').addEventListener('click',async()=>{register();const canvas=await html2canvas($('coupon'),{scale:2,backgroundColor:'#fbf8f2',useCORS:true});const a=document.createElement('a');a.download=filename()+'.png';a.href=canvas.toDataURL('image/png');a.click()});
-$('printBtn').addEventListener('click',()=>{register();window.print()});
-function renderJournal(){const list=$('journal');list.innerHTML='';if(!data.journal.length){list.innerHTML='<div class="entry"><span>—</span><span>Žurnalas tuščias</span><span>—</span></div>';return}data.journal.forEach(x=>{const d=document.createElement('div');d.className='entry';d.innerHTML=`<strong>${escapeHtml(String(x.number))}</strong><span>${escapeHtml(x.name||x.type)}</span><span>${escapeHtml(x.valid||'')}</span>`;list.appendChild(d)})}
-function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
-$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.download='Pukmuse-kuponu-duomenys.json';a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
-$('importFile').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{const v=JSON.parse(r.result);if(!v||!Array.isArray(v.journal))throw new Error();data={lastNumber:v.lastNumber??null,journal:v.journal};persist();alert('Kuponų duomenys importuoti.')}catch(err){alert('Nepavyko perskaityti atsarginės kopijos.')}};r.readAsText(file)});
+$('nextBtn').addEventListener('click',()=>{const next=Number(data.lastNumber)+1;data.lastNumber=next;$('number').value=next;persist();update()});
+function register(){const num=Number($('number').value);if(!Number.isFinite(num)||num<1)return;if(!data.journal.some(x=>Number(x.number)===num))data.journal.unshift({number:num,name:$('name').value.trim(),valid:$('valid').value,type:$('type').value,offer:offerText(),created:new Date().toISOString()});if(num>Number(data.lastNumber))data.lastNumber=num;persist()}
+function filename(){const n=($('name').value||'Kuponas').trim().replace(/[\\/:*?"<>|]+/g,' '),num=$('number').value||'';return `Dovanu kuponas ${num}${n?' '+n:''}`}
+$('saveBtn').addEventListener('click',async()=>{register();const canvas=await html2canvas($('coupon'),{scale:2,backgroundColor:'#fbf8f2',useCORS:true});const a=document.createElement('a');a.download=filename()+'.png';a.href=canvas.toDataURL('image/png');a.click()});$('printBtn').addEventListener('click',()=>{register();window.print()});
+function esc(s){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}function renderJournal(){const list=$('journal');list.innerHTML='';if(!data.journal.length){list.innerHTML='<div class="entry"><span>—</span><span>Žurnalas tuščias</span><span>—</span></div>';return}data.journal.forEach(x=>{const d=document.createElement('div');d.className='entry';d.innerHTML=`<strong>${esc(x.number)}</strong><span>${esc(x.name||x.type)}</span><span>${esc(ltDate(x.valid))}</span>`;list.appendChild(d)})}
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.download='Pukmuse-kuponu-duomenys.json';a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});$('importFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const v=JSON.parse(r.result);if(!v||!Array.isArray(v.journal))throw 0;data=v;persist();alert('Kuponų duomenys importuoti.')}catch{alert('Nepavyko perskaityti atsarginės kopijos.')}};r.readAsText(f)});
 renderStatus();renderJournal();update();
-</script>
-</body>
-</html>
+</script></body></html>
